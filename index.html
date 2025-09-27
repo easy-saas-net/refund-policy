@@ -92,6 +92,8 @@
 
         .content {
             display: none;
+            overflow: hidden;
+            word-wrap: break-word;
         }
 
         .content.active {
@@ -104,12 +106,14 @@
             font-size: 1.8em;
             border-left: 4px solid #667eea;
             padding-left: 15px;
+            clear: both;
         }
 
         .content h3 {
             color: #555;
             margin: 25px 0 10px 0;
             font-size: 1.4em;
+            clear: both;
         }
 
         .content h4 {
@@ -121,15 +125,19 @@
         .content p {
             margin-bottom: 15px;
             text-align: justify;
+            clear: both;
+            line-height: 1.8;
         }
 
         .content ul {
             margin: 15px 0;
             padding-left: 25px;
+            clear: both;
         }
 
         .content li {
             margin-bottom: 8px;
+            line-height: 1.6;
         }
 
         .highlight-box {
@@ -139,6 +147,8 @@
             padding: 15px;
             margin: 20px 0;
             border-radius: 5px;
+            clear: both;
+            overflow: hidden;
         }
 
         .contact-info {
@@ -148,6 +158,8 @@
             padding: 20px;
             margin: 30px 0;
             border-radius: 5px;
+            clear: both;
+            overflow: hidden;
         }
 
         .footer {
