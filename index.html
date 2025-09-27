@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Easy SaaS Refund Policy | Easy SaaS 退款政策 | Easy SaaS 返金ポリシー</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 3px solid #667eea;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #666;
+        }
+
+        .language-selector {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+
+        .language-selector h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .lang-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            padding: 10px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .lang-btn:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .lang-btn.active {
+            background: #667eea;
+            color: white;
+        }
+
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .content h2 {
+            color: #667eea;
+            margin: 30px 0 15px 0;
+            font-size: 1.8em;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .content h3 {
+            color: #555;
+            margin: 25px 0 10px 0;
+            font-size: 1.4em;
+        }
+
+        .content h4 {
+            color: #666;
+            margin: 20px 0 8px 0;
+            font-size: 1.2em;
+        }
+
+        .content p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .content ul {
+            margin: 15px 0;
+            padding-left: 25px;
+        }
+
+        .content li {
+            margin-bottom: 8px;
+        }
+
+        .highlight-box {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-left: 4px solid #fdcb6e;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+
+        .contact-info {
+            background: #e3f2fd;
+            border: 1px solid #bbdefb;
+            border-left: 4px solid #2196f3;
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e9ecef;
+            color: #666;
+        }
+
+        .version-info {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #28a745;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .lang-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .lang-btn {
+                width: 200px;
+            }
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 id="main-title">Easy SaaS Refund Policy</h1>
+            <p id="main-subtitle">退款政策 | 返金ポリシー</p>
+        </div>
+
+        <div class="language-selector">
+            <h3 id="lang-selector-title">Select Language / 选择语言 / 言語を選択</h3>
+            <div class="lang-buttons">
+                <button class="lang-btn" onclick="switchLanguage('zh')" data-lang="zh">中文</button>
+                <button class="lang-btn active" onclick="switchLanguage('en')" data-lang="en">English</button>
+                <button class="lang-btn" onclick="switchLanguage('ja')" data-lang="ja">日本語</button>
+            </div>
+        </div>
+
+        <!-- Chinese Content -->
+        <div class="content" id="content-zh">
+            <div class="version-info">
+                <strong>版本信息：</strong> v1.0 | 创建日期：2025-09-27 | 最后更新：2025-09-27
+            </div>
+
+            <p>在Easy SaaS，我们致力于为您提供优质的软件即服务（SaaS）产品。本退款政策明确了申请和处理我们 SaaS 产品退款的条款与条件，确保透明度并体现我们对客户满意度的承诺。本产品为数字服务类产品，通过邮寄方式交付授权码。</p>
+
+            <h2>1. 退款资格</h2>
+            
+            <h3>1.1 退款窗口及有效退款理由</h3>
+            
+            <p><strong>无理由退款：</strong>在支付费用后的 3 日内，若商品尚未发货，可申请无理由退款，需扣除支付渠道手续费。</p>
+
+            <p><strong>发货后退款：</strong>商品发货后，退款申请将根据以下条件审核：</p>
+            <ul>
+                <li><strong>技术问题：</strong>产品持续无法按宣传功能运行，且通过我们的支持渠道合理尝试后仍未解决。</li>
+                <li><strong>重大不符：</strong>产品与描述存在显著差异，严重影响正常使用。</li>
+                <li><strong>物流问题：</strong>因物流原因导致包裹在运输过程中丢失，我们将提供 100% 全额退款。</li>
+            </ul>
+
+            <p><strong>无理由退货：</strong>客户在签收包裹后 3 日内，若包裹未拆封且授权码未使用，可通过邮箱提交退款申请。超过 3 日、包裹已拆封或授权码已使用的情况，不予退款。</p>
+
+            <p><strong>质量问题：</strong>若签收后发现产品存在质量缺陷，需在签收后 48 小时内通过邮箱提交申请，并附上完整、清晰的包裹照片作为凭证。逾期或未提供有效凭证的申请将不予受理。</p>
+
+            <p><strong>拒收或主动退货：</strong>客户拒收包裹或在不符合无理由退款条件下主动退货，公司将在退款金额中扣除实际运费和支付渠道手续费后退还余款。</p>
+
+            <p><strong>地址错误：</strong>因客户提供错误或不完整收件地址导致包裹无法投递，公司在收到退回包裹后，将扣除商品费用 50% 后退款。若无法收到退回包裹，不予退款。</p>
+
+            <p><strong>退货要求：</strong>涉及退货的退款需在公司收到退货并确认无损坏或使用痕迹后批准。除物流问题外，所有退货退款均需扣除已产生的不可退还费用（如运费、手续费等）。</p>
+
+            <div class="highlight-box">
+                <strong>⚠️ 退款窗口：</strong>超过上述退款窗口的请求将不予受理。
+            </div>
+
+            <h3>1.2 不予退款的情况</h3>
+            <p>以下情况不适用退款：</p>
+            <ul>
+                <li>因客户改变主意或不再需要产品。</li>
+                <li>可通过客户支持渠道解决的次要问题。</li>
+                <li>客户在购买前未充分评估产品功能或适用性。</li>
+                <li>已产生的不可退还费用（如运费、支付手续费、第三方服务费等）。</li>
+                <li>因不可抗力（如自然灾害、国际运输延误等）导致的交付问题。</li>
+                <li>因客户个人原因导致包裹遗失、损坏、逾期提交申请或未能提供有效凭证。</li>
+            </ul>
+
+            <h2>2. 退款审核流程</h2>
+            <ul>
+                <li>所有退款请求将经过严格审核，以确保符合本政策规定的资格标准。</li>
+                <li>我们保留拒绝不符合政策要求的退款申请的权利。</li>
+                <li>在特定情况下，我们可能提供替代解决方案，如产品信用或未来购买折扣。</li>
+            </ul>
+
+            <h2>3. 如何请求退款</h2>
+            <ol>
+                <li>在退款窗口内通过邮箱 <strong>easy.saas.tech@gmail.com</strong> 联系我们的客户支持团队。</li>
+                <li>提供以下信息：
+                    <ul>
+                        <li>您的姓名、电子邮件地址、订单/发票号。</li>
+                        <li>详细的退款理由及相关凭证（如包裹照片，视情况而定）。</li>
+                    </ul>
+                </li>
+                <li>我们的团队将在 7 个工作日内回复您的请求。</li>
+            </ol>
+
+            <h2>4. 退款处理时间</h2>
+            <p>经批准的退款将在 14 个工作日内处理，并退回至原支付方式。</p>
+
+            <h2>5. 附加说明</h2>
+            <ul>
+                <li>本退款政策可能不时更新，请定期查看以获取最新版本。</li>
+                <li>本政策不限制您在适用法律下享有的消费者权利。</li>
+            </ul>
+
+            <div class="contact-info">
+                <h3>📞 联系我们</h3>
+                <p><strong>客户支持邮箱：</strong> easy.saas.tech@gmail.com</p>
+                <p><strong>工作时间：</strong> 周一至周五，9:00-17:00</p>
+            </div>
+        </div>
+
+        <!-- English Content -->
+        <div class="content active" id="content-en">
+            <div class="version-info">
+                <strong>Version Info:</strong> v1.0 | Created: 2025-09-27 | Last Updated: 2025-09-27
+            </div>
+
+            <p>At Easy SaaS, we are committed to providing you with high-quality Software as a Service (SaaS) products. This refund policy clarifies the terms and conditions for applying and processing refunds for our SaaS products, ensuring transparency and reflecting our commitment to customer satisfaction. This product is a digital service product delivered through postal authorization codes.</p>
+
+            <h2>1. Refund Eligibility</h2>
+            
+            <h3>1.1 Refund Window and Valid Refund Reasons</h3>
+            
+            <p><strong>No-Questions-Asked Refund:</strong> Within 3 days after payment, if the product has not been shipped, you can apply for a no-questions-asked refund, with payment channel processing fees deducted.</p>
+
+            <p><strong>Post-Shipment Refund:</strong> After the product is shipped, refund applications will be reviewed based on the following conditions:</p>
+            <ul>
+                <li><strong>Technical Issues:</strong> The product consistently fails to function as advertised, and reasonable attempts through our support channels have not resolved the issue.</li>
+                <li><strong>Significant Discrepancy:</strong> The product differs significantly from its description, seriously affecting normal use.</li>
+                <li><strong>Logistics Issues:</strong> Due to logistics reasons causing package loss during transportation, we will provide a 100% full refund.</li>
+            </ul>
+
+            <p><strong>No-Questions-Asked Return:</strong> Within 3 days after package receipt, if the package is unopened and the authorization code is unused, customers can submit a refund application via email. Refunds will not be granted for cases exceeding 3 days, opened packages, or used authorization codes.</p>
+
+            <p><strong>Quality Issues:</strong> If quality defects are discovered after receipt, applications must be submitted via email within 48 hours of receipt, accompanied by complete and clear package photos as evidence. Applications submitted late or without valid evidence will not be accepted.</p>
+
+            <p><strong>Refusal or Voluntary Return:</strong> If customers refuse packages or voluntarily return products under conditions that do not meet no-questions-asked refund criteria, the company will deduct actual shipping costs and payment channel processing fees from the refund amount.</p>
+
+            <p><strong>Address Errors:</strong> Due to incorrect or incomplete delivery addresses provided by customers causing undeliverable packages, the company will deduct 50% of the product cost after receiving the returned package. If the returned package cannot be received, no refund will be provided.</p>
+
+            <p><strong>Return Requirements:</strong> Refunds involving returns must be approved after the company receives the returned items and confirms no damage or usage traces. Except for logistics issues, all return refunds must deduct incurred non-refundable fees (such as shipping costs, processing fees, etc.).</p>
+
+            <div class="highlight-box">
+                <strong>⚠️ Refund Window:</strong> Requests exceeding the above refund window will not be accepted.
+            </div>
+
+            <h3>1.2 Non-Refundable Situations</h3>
+            <p>The following situations are not eligible for refunds:</p>
+            <ul>
+                <li>Customer change of mind or no longer needing the product.</li>
+                <li>Minor issues that can be resolved through customer support channels.</li>
+                <li>Customers not fully evaluating product functionality or suitability before purchase.</li>
+                <li>Incurred non-refundable fees (such as shipping costs, payment processing fees, third-party service fees, etc.).</li>
+                <li>Delivery issues due to force majeure (such as natural disasters, international shipping delays, etc.).</li>
+                <li>Package loss, damage, late application submission, or failure to provide valid evidence due to customer personal reasons.</li>
+            </ul>
+
+            <h2>2. Refund Review Process</h2>
+            <ul>
+                <li>All refund requests will undergo strict review to ensure compliance with the eligibility standards specified in this policy.</li>
+                <li>We reserve the right to reject refund applications that do not meet policy requirements.</li>
+                <li>In specific circumstances, we may provide alternative solutions such as product credits or future purchase discounts.</li>
+            </ul>
+
+            <h2>3. How to Request a Refund</h2>
+            <ol>
+                <li>Contact our customer support team via email <strong>easy.saas.tech@gmail.com</strong> within the refund window.</li>
+                <li>Provide the following information:
+                    <ul>
+                        <li>Your name, email address, order/invoice number.</li>
+                        <li>Detailed refund reason and relevant evidence (such as package photos, as applicable).</li>
+                    </ul>
+                </li>
+                <li>Our team will respond to your request within 7 business days.</li>
+            </ol>
+
+            <h2>4. Refund Processing Time</h2>
+            <p>Approved refunds will be processed within 14 business days and returned to the original payment method.</p>
+
+            <h2>5. Additional Notes</h2>
+            <ul>
+                <li>This refund policy may be updated from time to time. Please check regularly for the latest version.</li>
+                <li>This policy does not limit your consumer rights under applicable law.</li>
+            </ul>
+
+            <div class="contact-info">
+                <h3>📞 Contact Us</h3>
+                <p><strong>Customer Support Email:</strong> easy.saas.tech@gmail.com</p>
+                <p><strong>Business Hours:</strong> Monday to Friday, 9:00-17:00</p>
+            </div>
+        </div>
+
+        <!-- Japanese Content -->
+        <div class="content" id="content-ja">
+            <div class="version-info">
+                <strong>バージョン情報：</strong> v1.0 | 作成日：2025-09-27 | 最終更新：2025-09-27
+            </div>
+
+            <p>Easy SaaSでは、高品質なソフトウェア・アズ・ア・サービス（SaaS）製品を提供することに専念しています。この返金ポリシーは、当社のSaaS製品の返金申請と処理に関する条項と条件を明確にし、透明性を確保し、お客様満足度への当社のコミットメントを反映しています。この製品は、郵送による認証コード配信を通じて提供されるデジタルサービス製品です。</p>
+
+            <h2>1. 返金資格</h2>
+            
+            <h3>1.1 返金ウィンドウと有効な返金理由</h3>
+            
+            <p><strong>無条件返金：</strong>支払い後3日以内に、商品がまだ発送されていない場合、無条件返金を申請でき、支払いチャネル手数料が差し引かれます。</p>
+
+            <p><strong>発送後返金：</strong>商品発送後、返金申請は以下の条件に基づいて審査されます：</p>
+            <ul>
+                <li><strong>技術的問題：</strong>製品が宣伝された機能通りに動作せず、当社のサポートチャネルを通じた合理的な試行でも解決されない場合。</li>
+                <li><strong>重大な相違：</strong>製品が説明と著しく異なり、正常な使用に深刻な影響を与える場合。</li>
+                <li><strong>物流問題：</strong>物流の理由により輸送中にパッケージが紛失した場合、100%全額返金を提供します。</li>
+            </ul>
+
+            <p><strong>無条件返品：</strong>パッケージ受領後3日以内に、パッケージが未開封で認証コードが未使用の場合、メールで返金申請を提出できます。3日を超える、パッケージが開封済み、または認証コードが使用済みの場合は返金されません。</p>
+
+            <p><strong>品質問題：</strong>受領後に品質欠陥が発見された場合、受領後48時間以内にメールで申請を提出し、完全で明確なパッケージ写真を証拠として添付する必要があります。期限切れまたは有効な証拠のない申請は受理されません。</p>
+
+            <p><strong>拒否または自主返品：</strong>お客様がパッケージを拒否するか、無条件返金条件を満たさない状況で自主的に返品する場合、会社は返金額から実際の送料と支払いチャネル手数料を差し引いて残額を返金します。</p>
+
+            <p><strong>住所エラー：</strong>お客様が提供した間違ったまたは不完全な配送先住所によりパッケージが配達できない場合、会社は返送パッケージを受領後、商品費用の50%を差し引いて返金します。返送パッケージを受領できない場合、返金は行われません。</p>
+
+            <p><strong>返品要件：</strong>返品を伴う返金は、会社が返品を受領し、損傷や使用痕跡がないことを確認した後に承認されます。物流問題を除き、すべての返品返金は発生した返金不可費用（送料、手数料など）を差し引く必要があります。</p>
+
+            <div class="highlight-box">
+                <strong>⚠️ 返金ウィンドウ：</strong>上記の返金ウィンドウを超えるリクエストは受理されません。
+            </div>
+
+            <h3>1.2 返金対象外の状況</h3>
+            <p>以下の状況は返金の対象外です：</p>
+            <ul>
+                <li>お客様の気が変わった、または製品が不要になった場合。</li>
+                <li>カスタマーサポートチャネルで解決できる軽微な問題。</li>
+                <li>購入前に製品の機能や適合性を十分に評価しなかった場合。</li>
+                <li>発生した返金不可費用（送料、支払い処理手数料、第三者サービス料など）。</li>
+                <li>不可抗力（自然災害、国際輸送遅延など）による配送問題。</li>
+                <li>お客様の個人的な理由によるパッケージ紛失、損傷、申請提出遅延、または有効な証拠の提供失敗。</li>
+            </ul>
+
+            <h2>2. 返金審査プロセス</h2>
+            <ul>
+                <li>すべての返金リクエストは、このポリシーで指定された資格基準への準拠を確保するため、厳格な審査を受けます。</li>
+                <li>ポリシー要件を満たさない返金申請を拒否する権利を留保します。</li>
+                <li>特定の状況では、製品クレジットや将来の購入割引などの代替ソリューションを提供する場合があります。</li>
+            </ul>
+
+            <h2>3. 返金申請方法</h2>
+            <ol>
+                <li>返金ウィンドウ内にメール <strong>easy.saas.tech@gmail.com</strong> で当社のカスタマーサポートチームに連絡してください。</li>
+                <li>以下の情報を提供してください：
+                    <ul>
+                        <li>お客様の氏名、メールアドレス、注文/請求書番号。</li>
+                        <li>詳細な返金理由と関連証拠（パッケージ写真など、該当する場合）。</li>
+                    </ul>
+                </li>
+                <li>当社のチームは7営業日以内にお客様のリクエストに回答します。</li>
+            </ol>
+
+            <h2>4. 返金処理時間</h2>
+            <p>承認された返金は14営業日以内に処理され、元の支払い方法に返金されます。</p>
+
+            <h2>5. 追加説明</h2>
+            <ul>
+                <li>この返金ポリシーは随時更新される場合があります。最新バージョンについては定期的にご確認ください。</li>
+                <li>このポリシーは、適用される法律の下でのお客様の消費者権利を制限するものではありません。</li>
+            </ul>
+
+            <div class="contact-info">
+                <h3>📞 お問い合わせ</h3>
+                <p><strong>カスタマーサポートメール：</strong> easy.saas.tech@gmail.com</p>
+                <p><strong>営業時間：</strong> 月曜日から金曜日、9:00-17:00</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>© 2025 Easy SaaS. All rights reserved.</strong></p>
+            <p><em>Last updated: September 27, 2025</em></p>
+        </div>
+    </div>
+
+    <script>
+        // Language data
+        const languages = {
+            zh: {
+                title: "Easy SaaS 退款政策",
+                subtitle: "Refund Policy | 返金ポリシー",
+                selector: "选择语言 / Select Language / 言語を選択"
+            },
+            en: {
+                title: "Easy SaaS Refund Policy",
+                subtitle: "退款政策 | 返金ポリシー",
+                selector: "Select Language / 选择语言 / 言語を選択"
+            },
+            ja: {
+                title: "Easy SaaS 返金ポリシー",
+                subtitle: "Refund Policy | 退款政策",
+                selector: "言語を選択 / Select Language / 选择语言"
+            }
+        };
+
+        // Auto-detect browser language
+        function detectBrowserLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            const langCode = browserLang.split('-')[0].toLowerCase();
+            
+            // Check if we support this language
+            if (languages[langCode]) {
+                return langCode;
+            }
+            
+            // Default to English if not supported
+            return 'en';
+        }
+
+        // Switch language function
+        function switchLanguage(lang) {
+            // Update active button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
+
+            // Update content
+            document.querySelectorAll('.content').forEach(content => {
+                content.classList.remove('active');
+            });
+            document.getElementById(`content-${lang}`).classList.add('active');
+
+            // Update header
+            document.getElementById('main-title').textContent = languages[lang].title;
+            document.getElementById('main-subtitle').textContent = languages[lang].subtitle;
+            document.getElementById('lang-selector-title').textContent = languages[lang].selector;
+
+            // Add fade-in animation
+            document.getElementById(`content-${lang}`).classList.add('fade-in');
+            
+            // Store language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Initialize page
+        function initializePage() {
+            // Check for saved language preference first
+            const savedLang = localStorage.getItem('preferredLanguage');
+            
+            if (savedLang) {
+                // Use saved preference
+                switchLanguage(savedLang);
+                console.log('Using saved language preference:', savedLang);
+            } else {
+                // Auto-detect browser language
+                const detectedLang = detectBrowserLanguage();
+                switchLanguage(detectedLang);
+                console.log('Browser language detected:', navigator.language);
+                console.log('Auto-detected language:', detectedLang);
+            }
+        }
+
+        // Run initialization when page loads
+        document.addEventListener('DOMContentLoaded', initializePage);
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add keyboard shortcuts
+        document.addEventListener('keydown', function(e) {
+            if (e.ctrlKey || e.metaKey) {
+                switch(e.key) {
+                    case '1':
+                        e.preventDefault();
+                        switchLanguage('zh');
+                        break;
+                    case '2':
+                        e.preventDefault();
+                        switchLanguage('en');
+                        break;
+                    case '3':
+                        e.preventDefault();
+                        switchLanguage('ja');
+                        break;
+                }
+            }
+        });
+
+        // Print function
+        function printPolicy() {
+            window.print();
+        }
+
+        // Share function
+        function sharePolicy() {
+            if (navigator.share) {
+                navigator.share({
+                    title: document.title,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback: copy URL to clipboard
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    alert('URL copied to clipboard!');
+                });
+            }
+        }
+    </script>
+</body>
+</html>
